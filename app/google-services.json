@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "259744047976",
+    "firebase_url": "https://food-waste-management-def14-default-rtdb.firebaseio.com",
+    "project_id": "food-waste-management-def14",
+    "storage_bucket": "food-waste-management-def14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259744047976:android:7f4fe648ce2a267bce6cdd",
+        "android_client_info": {
+          "package_name": "com.example.aahaarapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259744047976-vsv63b7j8v2kti4srbclfg0h723knu2t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLwEP-xsiYg64RMB5Z6lWX2C18DaZIWR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259744047976-vsv63b7j8v2kti4srbclfg0h723knu2t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259744047976:android:c65b0262bc87c0e5ce6cdd",
+        "android_client_info": {
+          "package_name": "com.example.aaharapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259744047976-vsv63b7j8v2kti4srbclfg0h723knu2t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLwEP-xsiYg64RMB5Z6lWX2C18DaZIWR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259744047976-vsv63b7j8v2kti4srbclfg0h723knu2t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcom"
+    tools:context=".landingpage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.936"
+        tools:ignore="MissingConstraints,ScrollViewSize"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/cardLogin"
+            android:layout_marginTop="10dp"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded"
+            android:text="Login" />
+
+        <Button
+            android:id="@+id/cardRegister"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded"
+            android:text="Register" />
+
+        <Button
+            android:id="@+id/cardAboutus"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded"
+            android:layout_marginBottom="10dp"
+            android:text="About Us" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout >

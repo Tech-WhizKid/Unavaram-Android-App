@@ -1,0 +1,67 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryDark">@color/purple_500</item>
+        <item name="colorAccent">@color/purple_700</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" >
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryDark">@color/purple_500</item>
+        <item name="colorAccent">@color/purple_700</item>
+    </style>
+    <style name="MyTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColorHint">@color/white</item>
+        <item name="boxStrokeColor">@color/edit_text_box_border</item>
+    </style>
+
+    <style name="App.light" parent="Theme.AppCompat.Light.NoActionBar" tools:ignore="ResourceCycle">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryDark">@color/purple_500</item>
+        <item name="colorAccent">@color/purple_700</item>
+    </style>
+
+    <style name="App.light.action" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryDark">@color/purple_500</item>
+        <item name="colorAccent">@color/purple_700</item>
+        <item name="actionOverflowButtonStyle">@style/Threedotcolor</item>
+    </style>
+
+    <style name="App.light.action.profile" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryDark">@color/purple_500</item>
+        <item name="colorAccent">@color/purple_700</item>
+        <item name="android:statusBarColor">#b9ecff</item>
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/ActionBar</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+
+    <style name="MyTextInputEditText" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox.Dense">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <!--suppress AndroidDomInspection -->
+    <style name="SplashScreen">
+        <item name="android:windowBackground">@drawable/background_splashscreen</item>
+    </style>
+
+    <style name="Threedotcolor" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="tint">@color/black</item>
+    </style>
+
+    <style name="ActionBar" parent="Widget.AppCompat.ActionBar.Solid">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="background">@android:color/transparent</item>
+    </style>
+
+</resources>
+

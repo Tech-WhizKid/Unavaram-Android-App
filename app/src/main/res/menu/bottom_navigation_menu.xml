@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="@string/menu_home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_notifications"
+        android:icon="@drawable/baseline_history_24"
+        android:title="History"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/fooddata"
+        android:icon="@drawable/outline_food_bank_24"
+        android:title="Food Data"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/baseline_person_24"
+        android:title="Profile"
+        app:showAsAction="ifRoom" />
+</menu>
