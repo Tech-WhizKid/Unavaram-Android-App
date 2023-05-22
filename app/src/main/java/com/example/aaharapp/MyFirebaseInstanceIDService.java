@@ -36,25 +36,25 @@ public class MyFirebaseInstanceIDService extends FirebaseMessagingService {
             String message = remoteMessage.getNotification().getBody();
             String click = remoteMessage.getNotification().getClickAction();
             Log.d("msg:", message);
-            sendNotification(title,message);
+            sendNotification(getApplicationContext(),title,message);
         }
     }
 
-    public void sendNotification(String title, String body)  {
-        Intent intent = new Intent(this,NotificationActivity.class);
+    public static void sendNotification(Context context ,String title, String body)  {
+        Intent intent = new Intent(context,NotificationActivity.class);
         intent.putExtra("title",title);
         intent.putExtra("message",body);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(
-                this,
+                context,
                 0,
                 intent,
                 PendingIntent.FLAG_IMMUTABLE);
 
-        Bitmap largeIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.ic);
+        Bitmap largeIcon = BitmapFactory.decodeResource(context.getResources(), R.drawable.ic);
 
-        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
+        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setContentTitle(title)
                 .setContentText(body)
                 .setContentIntent(pendingIntent)
@@ -62,7 +62,7 @@ public class MyFirebaseInstanceIDService extends FirebaseMessagingService {
                 .setSmallIcon(R.drawable.ic)
                 .setLargeIcon(largeIcon)
                 .setAutoCancel(true);
-        NotificationManager notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(NOTIFICATION_ID, notificationBuilder.build());
     }
 
