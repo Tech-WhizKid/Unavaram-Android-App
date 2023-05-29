@@ -50,7 +50,7 @@ public class MyFirebaseInstanceIDService extends FirebaseMessagingService {
                 context,
                 0,
                 intent,
-                PendingIntent.FLAG_IMMUTABLE);
+                PendingIntent.FLAG_UPDATE_CURRENT|PendingIntent.FLAG_IMMUTABLE);
 
         Bitmap largeIcon = BitmapFactory.decodeResource(context.getResources(), R.drawable.ic);
 

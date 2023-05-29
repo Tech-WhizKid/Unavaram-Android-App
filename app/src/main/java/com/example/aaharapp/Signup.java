@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +27,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -52,6 +55,13 @@ public class Signup extends AppCompatActivity {
         mRegisterBtn=findViewById(R.id.register);
         mLoginBtn = findViewById(R.id.login);
         mdobr = findViewById(R.id.dobr);
+
+        mdobr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             showDatePickerDialog();
+            }
+        });
 
         fAuth=FirebaseAuth.getInstance();
         fStore=FirebaseFirestore.getInstance();
@@ -149,5 +159,34 @@ public class Signup extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), Logup.class));
             }
         });
+    }
+
+    public void showDatePickerDialog(){
+        // Get the instance of Calendar
+        Calendar c = Calendar.getInstance();
+
+        // Get the day, month, and year
+        int year = c.get(Calendar.YEAR);
+        int month = c.get(Calendar.MONTH);
+        int day = c.get(Calendar.DAY_OF_MONTH);
+
+        // Create a DatePickerDialog
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                Signup.this,
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int selectedYear, int monthOfYear, int dayOfMonth) {
+                        // Set the selected date to the EditText
+                        String dat = dayOfMonth + "-" + (monthOfYear + 1) + "-" + selectedYear;
+                        mdobr.setText(dat);
+                    }
+                },
+                // Pass the year, month, and day for the selected date
+                year, month, day
+        );
+
+        // Show the DatePickerDialog
+        datePickerDialog.show();
+
     }
 }
